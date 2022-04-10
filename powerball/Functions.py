@@ -11,6 +11,13 @@ class Functions(PowerBallGame):
         self.guessing = guessing
         self.winningAmount = winningAmount
 
+    def getFullName(self):
+        return (self.fullName)
+
+    def setFullName(self,fullname):
+        set.fullname=input(fullname)
+
+
     def __str__(self):
         return super(Functions, self).__str__() + " " + str(self.guessing) + " " + str(self.winningAmount)
 
@@ -22,7 +29,7 @@ strongNumber = []
 
 
 # Function The winning balls, I defined an array of white balls and a strong number and inserted them
-def PowerballWin():
+def powerballWin():
     for i in range(5):
         number = ran.randint(1, 20)
         while number in whiteBalls:
@@ -38,7 +45,7 @@ luckyStrongNumber = []
 
 
 # Function of your lucky balls, I set up an array of white balls and a strong number and inserted them
-def LuckyPowerball():
+def luckyPowerball():
     for i in range(5):
         number = ran.randint(1, 20)
         while number in luckyWhiteBalls:
